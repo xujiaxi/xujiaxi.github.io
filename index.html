@@ -1,36 +1,292 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jiaxi Xu | Software Engineer & Technical Lead</title>
+  <meta name="description" content="Jiaxi Xu — Software Engineer and Technical Lead with 6 years at AWS building hyper-scale distributed systems and ML infrastructure. Former AWS Bedrock and SageMaker engineer.">
+  <meta property="og:title" content="Jiaxi Xu | Software Engineer & Technical Lead">
+  <meta property="og:description" content="6 years at AWS designing, scaling, and operating distributed systems and ML infrastructure.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://xujiaxi.github.io/">
+  <link rel="canonical" href="https://xujiaxi.github.io/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f172a'/><text x='50' y='72' font-size='58' font-family='Arial' font-weight='bold' fill='%2338bdf8' text-anchor='middle'>JX</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Jiaxi Xu home">
+        <span class="brand-mark">JX</span>
+        <span class="brand-name">Jiaxi Xu</span>
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="resume.pdf" class="btn btn-primary btn-resume" target="_blank" rel="noopener">Download Resume</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-<div class="home">
+  <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <p class="hero-eyebrow">Hello, I'm</p>
+      <h1 class="hero-name">Jiaxi Xu</h1>
+      <p class="hero-title">Software Engineer &amp; Technical Lead</p>
+      <p class="hero-subtitle">
+        I design, scale, and operate hyper-scale distributed systems and machine learning
+        infrastructure. 6 years at Amazon Web Services, from Tier-1 search platforms to
+        generative AI inference.
+      </p>
+      <div class="hero-actions">
+        <a href="#experience" class="btn btn-primary btn-lg">View Experience</a>
+        <a href="#contact" class="btn btn-outline btn-lg">Contact Me</a>
+      </div>
+      <div class="hero-meta">
+        <span class="hero-location">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          Greater Seattle Area, WA
+        </span>
+        <span class="hero-links">
+          <a href="https://github.com/xujiaxi" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+          <span class="dot">·</span>
+          <a href="https://www.linkedin.com/in/jiaxi-xu-tech/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+          <span class="dot">·</span>
+          <a href="mailto:jiaxixus@gmail.com" aria-label="Email">jiaxixus@gmail.com</a>
+        </span>
+      </div>
+    </div>
+  </section>
 
-  <ul class="post-list">
-    {% for post in paginator.posts %}
-      <li>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        <span class="post-meta">{% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %} | {{ post.date | date: "%b %-d, %Y" }}</span>
-        <div class="post-excerpt">{{ post.excerpt }}</div>
-        <div class="post-meta">{% if post.categories %}Filed under: <a href="{{ "/categories/" | prepend: site.baseurl }}#category-{{ post.categories.first | replace: ' ', '_' }}">{{ post.categories.first }}</a>{% for category in post.categories offset:1 %}, <a href="{{ "/categories/" | prepend: site.baseurl }}#category-{{ category | replace: ' ', '_' }}">{{ category }}</a>{% endfor %}{% endif %}{% if post.tags %}{% if post.categories %} | {% endif %}Tags: <a href="{{ "/tags/" | prepend: site.baseurl }}#tag-{{ post.tags.first | replace: ' ', '_' }}">{{ post.tags.first }}</a>{% for tag in post.tags offset:1 %}, <a href="{{ "/tags/" | prepend: site.baseurl }}#tag-{{ tag | replace: ' ', '_' }}">{{ tag }}</a>{% endfor %}{% endif %}</div>
-        <div class="read-more"><a href="{{ post.url | prepend: site.baseurl }}">Read more &raquo;</a></div>
-      </li>
-    {% endfor %}
-  </ul>
-  {% if paginator.total_pages > 1 %}
-  <div class="paginator">
-    {% if paginator.next_page %}
-      <a class="next_page" href="{{ paginator.next_page_path }}">← Older posts</a>
-    {% endif %}
+  <main>
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">About Me</p>
+          <h2 class="section-title">A track record of shipping reliable, large-scale systems</h2>
+        </div>
+        <div class="about-grid reveal">
+          <div class="about-text">
+            <p>
+              Software Engineer and Technical Lead with <strong>6 years of experience at Amazon Web Services (AWS)</strong>
+              designing, scaling, and operating hyper-scale distributed systems and machine learning infrastructure.
+            </p>
+            <p>
+              Proven track record of architecting cross-organizational ML control planes, modernizing legacy systems,
+              and owning operational excellence — from threat modeling to global public release. Passionate about driving
+              autonomous, high-impact technical initiatives that move key business metrics.
+            </p>
+          </div>
+          <div class="about-highlights">
+            <div class="highlight-card">
+              <span class="highlight-num">6+</span>
+              <span class="highlight-label">Years at AWS</span>
+            </div>
+            <div class="highlight-card">
+              <span class="highlight-num">10k+</span>
+              <span class="highlight-label">LoRA adapters per endpoint</span>
+            </div>
+            <div class="highlight-card">
+              <span class="highlight-num">100k</span>
+              <span class="highlight-label">TPS sync requests</span>
+            </div>
+            <div class="highlight-card">
+              <span class="highlight-num">99.99%</span>
+              <span class="highlight-label">Onboarding success rate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    {% if paginator.previous_page %}
-      {% if paginator.previous_page == 1 %}
-        <a class="prev_page" href="/">Newer posts →</a>
-      {% else %}
-        <a class="prev_page" href="{{ paginator.previous_page_path }}">Newer posts →</a>
-      {% endif %}
-    {% endif %}
-    <div style="clear:both"></div>
-  </div>
-  {% endif %}
-</div>
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">Experience</p>
+          <h2 class="section-title">Where I've made an impact</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="job">
+            <div class="job-marker" aria-hidden="true"></div>
+            <div class="job-card reveal">
+              <header class="job-header">
+                <div>
+                  <h3 class="job-role">Software Development Engineer</h3>
+                  <p class="job-org">Amazon Web Services (AWS) — Bedrock &amp; SageMaker Hosting Team</p>
+                </div>
+                <div class="job-meta">
+                  <span class="job-location">Bellevue, WA</span>
+                  <span class="job-date">Dec 2023 – Present</span>
+                </div>
+              </header>
+              <div class="job-projects">
+                <div class="project">
+                  <h4 class="project-name">Heterogeneous GPU Endpoint Orchestration</h4>
+                  <ul class="project-bullets">
+                    <li>Architected a custom weighted routing framework that integrates customer-defined weight ratios across multiple routing algorithms (load-aware, random, etc.) for precise traffic distribution across diverse hardware capacities.</li>
+                    <li>Co-designed and implemented mixed-GPU control plane workflows with strict backward compatibility, enabling seamless customer migrations from homogeneous endpoints — a critical fleet elasticity lever that mitigated Insufficient Capacity Errors (ICE) during regional hardware shortages.</li>
+                  </ul>
+                </div>
+                <div class="project">
+                  <h4 class="project-name">SageMaker Dynamic LoRA Inference System <span class="project-tag">Patent Filed</span></h4>
+                  <ul class="project-bullets">
+                    <li>Led a 5-engineer team to architect and launch the SageMaker Dynamic LoRA Inference system, establishing the foundational dynamic loading layer for AWS Bedrock CMI and SageMaker Studio; scaled to support <strong>10k+ adapters per endpoint</strong> with <strong>25% better inter-token latency (ITL)</strong> than primary competitors.</li>
+                    <li>Engineered a sticky-session routing mechanism that seamlessly handled adapter scaling events and drove an <strong>88% reduction in P90 TTFT</strong> (16.9s → 2.1s) for subsequent requests.</li>
+                    <li>Redesigned legacy inference lifecycle components, eliminating race conditions and concurrency bottlenecks at high throughput while preserving backward compatibility.</li>
+                  </ul>
+                </div>
+                <div class="project">
+                  <h4 class="project-name">AWS Bedrock Async API for First &amp; Third-Party Models</h4>
+                  <ul class="project-bullets">
+                    <li>Architected and implemented a highly scalable job-status orchestrator and internal data APIs for long-running inference tasks using AWS Fargate and Step Functions; actively shaped low-level and high-level design documents.</li>
+                    <li>Consolidated internal and third-party model workflows into a unified orchestration layer and drove cross-organizational consensus on complex interface contracts with external model providers.</li>
+                    <li>Prevented a production incident by root-causing and patching a critical idempotency bug, then deployed a non-destructive resource-cleanup solution later adopted as an integration standard by internal partner teams.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="job">
+            <div class="job-marker" aria-hidden="true"></div>
+            <div class="job-card reveal">
+              <header class="job-header">
+                <div>
+                  <h3 class="job-role">Software Development Engineer</h3>
+                  <p class="job-org">Amazon Web Services (AWS) — Identity &amp; Resource Management Team</p>
+                </div>
+                <div class="job-meta">
+                  <span class="job-location">Seattle, WA</span>
+                  <span class="job-date">Apr 2020 – Dec 2023</span>
+                </div>
+              </header>
+              <div class="job-projects">
+                <div class="project">
+                  <h4 class="project-name">AWS Resource Explorer <span class="project-tag">Tier 1 Distributed Resource Search</span></h4>
+                  <ul class="project-bullets">
+                    <li>Spearheaded the design and independent implementation of asynchronous customer onboarding APIs and organizational cell-assignment workflows; managed the global subscription lifecycle with a <strong>99.99% onboarding success rate across 100k+ subscriptions</strong> over 6 months.</li>
+                    <li>Developed core components of a cross-region search system that replicates metadata across regions for low-latency queries; refactored the data pipeline for a distributed cellular architecture, scaling the system to process <strong>100k+ TPS sync requests</strong>.</li>
+                    <li>Resolved distributed out-of-order delivery issues in asynchronous replication by redesigning the data plane's deletion strategy, securing global state consistency in high-concurrency environments.</li>
+                    <li>Designed and deployed a custom API TPS throttling and monthly quota-management framework that protected the underlying ElasticSearch backend from DDoS attacks and abusive usage.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">Skills</p>
+          <h2 class="section-title">Tools I use to build at scale</h2>
+        </div>
+        <div class="skills-grid reveal">
+          <div class="skill-card">
+            <h3 class="skill-title">Cloud &amp; Infrastructure</h3>
+            <ul class="skill-tags">
+              <li>AWS</li><li>SageMaker</li><li>Bedrock</li><li>ECS</li><li>Fargate</li><li>EC2</li><li>Lambda</li><li>Step Functions</li><li>API Gateway</li><li>S3</li><li>CDK</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3 class="skill-title">Databases &amp; Search</h3>
+            <ul class="skill-tags">
+              <li>DynamoDB</li><li>ElasticSearch</li><li>OpenSearch</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3 class="skill-title">ML Inference &amp; Systems</h3>
+            <ul class="skill-tags">
+              <li>vLLM</li><li>LoRA</li><li>Model Inference</li><li>Distributed Systems Architecture</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3 class="skill-title">Languages &amp; Frameworks</h3>
+            <ul class="skill-tags">
+              <li>Java</li><li>Python</li><li>Go</li><li>SpringBoot</li><li>Smithy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="education">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">Education</p>
+          <h2 class="section-title">Academic background</h2>
+        </div>
+        <div class="edu-grid reveal">
+          <article class="edu-card">
+            <h3 class="edu-school">University of Virginia</h3>
+            <p class="edu-degree">Master of Engineering, Computer Engineering</p>
+            <p class="edu-meta">Charlottesville, VA · Sept 2017 – Dec 2019</p>
+          </article>
+          <article class="edu-card">
+            <h3 class="edu-school">Southeast University</h3>
+            <p class="edu-degree">Bachelor of Engineering</p>
+            <p class="edu-meta">Jiangsu, China · Aug 2013 – Jun 2017</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">Contact</p>
+          <h2 class="section-title">Let's build something great together</h2>
+          <p class="section-subtitle">I'm open to senior software engineering, technical lead, and ML infrastructure roles.</p>
+        </div>
+        <div class="contact-grid reveal">
+          <a class="contact-card" href="mailto:jiaxixus@gmail.com">
+            <span class="contact-icon" aria-hidden="true">✉</span>
+            <span class="contact-label">Email</span>
+            <span class="contact-value">jiaxixus@gmail.com</span>
+          </a>
+          <a class="contact-card" href="https://github.com/xujiaxi" target="_blank" rel="noopener">
+            <span class="contact-icon" aria-hidden="true">⌥</span>
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/xujiaxi</span>
+          </a>
+          <a class="contact-card" href="https://www.linkedin.com/in/jiaxi-xu-tech/" target="_blank" rel="noopener">
+            <span class="contact-icon" aria-hidden="true">in</span>
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">linkedin.com/in/jiaxi-xu-tech</span>
+          </a>
+          <a class="contact-card" href="resume.pdf" target="_blank" rel="noopener">
+            <span class="contact-icon" aria-hidden="true">↓</span>
+            <span class="contact-label">Resume</span>
+            <span class="contact-value">Download PDF</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year">2025</span> Jiaxi Xu. Built with care and deployed on GitHub Pages.</p>
+      <p class="footer-links">
+        <a href="https://github.com/xujiaxi" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jiaxi-xu-tech/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:jiaxixus@gmail.com">Email</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
