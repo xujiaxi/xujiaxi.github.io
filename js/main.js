@@ -2,16 +2,48 @@
 (function () {
   'use strict';
 
+  var root = document.documentElement;
   var header = document.getElementById('siteHeader');
   var navToggle = document.getElementById('navToggle');
   var mainNav = document.getElementById('mainNav');
+  var themeToggle = document.getElementById('themeToggle');
   var yearSpan = document.getElementById('year');
   var navLinks = document.querySelectorAll('.nav-link');
   var revealEls = document.querySelectorAll('.reveal');
+  var STORAGE_KEY = 'jx-theme';
 
   // Current year in footer
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
+  }
+
+  // Theme toggle (light / dark)
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    try {
+      localStorage.setItem(STORAGE_KEY, theme);
+    } catch (e) {
+      // localStorage unavailable; ignore
+    }
+  }
+
+  function initTheme() {
+    var saved = null;
+    try {
+      saved = localStorage.getItem(STORAGE_KEY);
+    } catch (e) {
+      saved = null;
+    }
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var theme = saved || (prefersDark ? 'dark' : 'light');
+    applyTheme(theme);
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+    });
   }
 
   // Sticky header shadow on scroll
@@ -73,7 +105,7 @@
           }
         });
       },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
     );
 
     revealEls.forEach(function (el) {
@@ -85,6 +117,7 @@
     });
   }
 
+  initTheme();
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 })();

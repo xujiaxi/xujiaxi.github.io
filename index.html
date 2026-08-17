@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jiaxi Xu | Software Engineer & Technical Lead</title>
-  <meta name="description" content="Jiaxi Xu — Software Engineer and Technical Lead with 6 years at AWS building hyper-scale distributed systems and ML infrastructure. Former AWS Bedrock and SageMaker engineer.">
+  <meta name="description" content="Jiaxi Xu — Software Engineer and Technical Lead with 6 years at AWS building hyper-scale distributed systems and ML inference infrastructure. Open to senior SDE, tech lead, and ML infrastructure roles.">
   <meta property="og:title" content="Jiaxi Xu | Software Engineer & Technical Lead">
-  <meta property="og:description" content="6 years at AWS designing, scaling, and operating distributed systems and ML infrastructure.">
+  <meta property="og:description" content="6 years at AWS designing, scaling, and operating distributed systems and ML infrastructure. Open to senior SDE, tech lead, and ML infrastructure roles.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://xujiaxi.github.io/">
   <link rel="canonical" href="https://xujiaxi.github.io/">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f172a'/><text x='50' y='72' font-size='58' font-family='Arial' font-weight='bold' fill='%2338bdf8' text-anchor='middle'>JX</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230d1117'/><text x='50' y='70' font-size='54' font-family='Menlo,Monaco,Courier New,monospace' font-weight='bold' fill='%233fb950' text-anchor='middle'>JX</text></svg>">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site-header" id="siteHeader">
     <div class="container nav-wrap">
       <a class="brand" href="#top" aria-label="Jiaxi Xu home">
-        <span class="brand-mark">JX</span>
+        <span class="brand-mark">~/jx</span>
         <span class="brand-name">Jiaxi Xu</span>
       </a>
       <nav class="main-nav" id="mainNav" aria-label="Main navigation">
@@ -27,6 +27,10 @@
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#education" class="nav-link">Education</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle light / dark mode">
+            <span class="theme-icon theme-icon-sun">☀</span>
+            <span class="theme-icon theme-icon-moon">☾</span>
+          </button></li>
           <li><a href="resume.pdf" class="btn btn-primary btn-resume" target="_blank" rel="noopener">Download Resume</a></li>
         </ul>
       </nav>
@@ -39,14 +43,18 @@
   <section class="hero" id="top">
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="container hero-content">
-      <p class="hero-eyebrow">Hello, I'm</p>
+      <p class="hero-eyebrow">~/jiaxi-xu --introduce</p>
       <h1 class="hero-name">Jiaxi Xu</h1>
       <p class="hero-title">Software Engineer &amp; Technical Lead</p>
       <p class="hero-subtitle">
         I design, scale, and operate hyper-scale distributed systems and machine learning
-        infrastructure. 6 years at Amazon Web Services, from Tier-1 search platforms to
+        infrastructure. 6 years at Amazon Web Services — from Tier-1 search platforms to
         generative AI inference.
       </p>
+      <div class="hero-availability">
+        <span class="pulse" aria-hidden="true"></span>
+        Open to Senior SDE · Tech Lead · ML Infrastructure roles
+      </div>
       <div class="hero-actions">
         <a href="#experience" class="btn btn-primary btn-lg">View Experience</a>
         <a href="#contact" class="btn btn-outline btn-lg">Contact Me</a>
@@ -54,7 +62,7 @@
       <div class="hero-meta">
         <span class="hero-location">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-          Greater Seattle Area, WA
+          Issaquah, WA · Greater Seattle Area
         </span>
         <span class="hero-links">
           <a href="https://github.com/xujiaxi" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
@@ -63,6 +71,24 @@
           <span class="dot">·</span>
           <a href="mailto:jiaxixus@gmail.com" aria-label="Email">jiaxixus@gmail.com</a>
         </span>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">6+</span>
+          <span class="hero-stat-label">Years at AWS</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">10k+</span>
+          <span class="hero-stat-label">Adapters per endpoint</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">100k</span>
+          <span class="hero-stat-label">TPS sync requests</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">99.99%</span>
+          <span class="hero-stat-label">Onboarding success</span>
+        </div>
       </div>
     </div>
   </section>
@@ -82,9 +108,17 @@
             </p>
             <p>
               Proven track record of architecting cross-organizational ML control planes, modernizing legacy systems,
-              and owning operational excellence — from threat modeling to global public release. Passionate about driving
-              autonomous, high-impact technical initiatives that move key business metrics.
+              and owning operational excellence — from threat modeling to global public release. I enjoy working at the
+              intersection of <strong>distributed systems, model inference, and developer platforms</strong>.
             </p>
+            <div class="about-looking">
+              <h3 class="about-looking-title">What I'm looking for</h3>
+              <ul class="about-looking-list">
+                <li>Senior Software Engineer / Technical Lead roles in the U.S.</li>
+                <li>Distributed systems, ML infrastructure, or GenAI inference platforms</li>
+                <li>Teams that value ownership, technical depth, and shipping</li>
+              </ul>
+            </div>
           </div>
           <div class="about-highlights">
             <div class="highlight-card">
@@ -96,12 +130,20 @@
               <span class="highlight-label">LoRA adapters per endpoint</span>
             </div>
             <div class="highlight-card">
+              <span class="highlight-num">88%</span>
+              <span class="highlight-label">P90 TTFT reduction</span>
+            </div>
+            <div class="highlight-card">
               <span class="highlight-num">100k</span>
               <span class="highlight-label">TPS sync requests</span>
             </div>
             <div class="highlight-card">
               <span class="highlight-num">99.99%</span>
               <span class="highlight-label">Onboarding success rate</span>
+            </div>
+            <div class="highlight-card">
+              <span class="highlight-num">1</span>
+              <span class="highlight-label">Patent filed (Dynamic LoRA)</span>
             </div>
           </div>
         </div>
@@ -132,6 +174,9 @@
               <div class="job-projects">
                 <div class="project">
                   <h4 class="project-name">Heterogeneous GPU Endpoint Orchestration</h4>
+                  <ul class="project-tags">
+                    <li>Routing</li><li>GPU Fleet</li><li>Control Plane</li><li>Backward Compatibility</li>
+                  </ul>
                   <ul class="project-bullets">
                     <li>Architected a custom weighted routing framework that integrates customer-defined weight ratios across multiple routing algorithms (load-aware, random, etc.) for precise traffic distribution across diverse hardware capacities.</li>
                     <li>Co-designed and implemented mixed-GPU control plane workflows with strict backward compatibility, enabling seamless customer migrations from homogeneous endpoints — a critical fleet elasticity lever that mitigated Insufficient Capacity Errors (ICE) during regional hardware shortages.</li>
@@ -139,6 +184,9 @@
                 </div>
                 <div class="project">
                   <h4 class="project-name">SageMaker Dynamic LoRA Inference System <span class="project-tag">Patent Filed</span></h4>
+                  <ul class="project-tags">
+                    <li>LoRA</li><li>vLLM</li><li>Model Inference</li><li>Team Lead</li><li>Sticky Routing</li>
+                  </ul>
                   <ul class="project-bullets">
                     <li>Led a 5-engineer team to architect and launch the SageMaker Dynamic LoRA Inference system, establishing the foundational dynamic loading layer for AWS Bedrock CMI and SageMaker Studio; scaled to support <strong>10k+ adapters per endpoint</strong> with <strong>25% better inter-token latency (ITL)</strong> than primary competitors.</li>
                     <li>Engineered a sticky-session routing mechanism that seamlessly handled adapter scaling events and drove an <strong>88% reduction in P90 TTFT</strong> (16.9s → 2.1s) for subsequent requests.</li>
@@ -147,6 +195,9 @@
                 </div>
                 <div class="project">
                   <h4 class="project-name">AWS Bedrock Async API for First &amp; Third-Party Models</h4>
+                  <ul class="project-tags">
+                    <li>Async APIs</li><li>Fargate</li><li>Step Functions</li><li>Cross-org Design</li>
+                  </ul>
                   <ul class="project-bullets">
                     <li>Architected and implemented a highly scalable job-status orchestrator and internal data APIs for long-running inference tasks using AWS Fargate and Step Functions; actively shaped low-level and high-level design documents.</li>
                     <li>Consolidated internal and third-party model workflows into a unified orchestration layer and drove cross-organizational consensus on complex interface contracts with external model providers.</li>
@@ -173,6 +224,9 @@
               <div class="job-projects">
                 <div class="project">
                   <h4 class="project-name">AWS Resource Explorer <span class="project-tag">Tier 1 Distributed Resource Search</span></h4>
+                  <ul class="project-tags">
+                    <li>Distributed Search</li><li>DynamoDB</li><li>ElasticSearch</li><li>Multi-Region</li><li>Throttling</li>
+                  </ul>
                   <ul class="project-bullets">
                     <li>Spearheaded the design and independent implementation of asynchronous customer onboarding APIs and organizational cell-assignment workflows; managed the global subscription lifecycle with a <strong>99.99% onboarding success rate across 100k+ subscriptions</strong> over 6 months.</li>
                     <li>Developed core components of a cross-region search system that replicates metadata across regions for low-latency queries; refactored the data pipeline for a distributed cellular architecture, scaling the system to process <strong>100k+ TPS sync requests</strong>.</li>
@@ -191,7 +245,7 @@
       <div class="container">
         <div class="section-head reveal">
           <p class="section-kicker">Skills</p>
-          <h2 class="section-title">Tools I use to build at scale</h2>
+          <h2 class="section-title">Tools and practices I use to build at scale</h2>
         </div>
         <div class="skills-grid reveal">
           <div class="skill-card">
@@ -216,6 +270,12 @@
             <h3 class="skill-title">Languages &amp; Frameworks</h3>
             <ul class="skill-tags">
               <li>Java</li><li>Python</li><li>Go</li><li>SpringBoot</li><li>Smithy</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3 class="skill-title">Engineering Practices</h3>
+            <ul class="skill-tags">
+              <li>Distributed Systems</li><li>API Design</li><li>Technical Leadership</li><li>Cross-team Collaboration</li><li>Operational Excellence</li><li>Threat Modeling</li><li>Backward Compatibility</li><li>Performance Optimization</li>
             </ul>
           </div>
         </div>
@@ -248,13 +308,18 @@
         <div class="section-head reveal">
           <p class="section-kicker">Contact</p>
           <h2 class="section-title">Let's build something great together</h2>
-          <p class="section-subtitle">I'm open to senior software engineering, technical lead, and ML infrastructure roles.</p>
+          <p class="section-subtitle">I'm open to senior software engineering, technical lead, and ML infrastructure roles in the U.S.</p>
         </div>
         <div class="contact-grid reveal">
           <a class="contact-card" href="mailto:jiaxixus@gmail.com">
             <span class="contact-icon" aria-hidden="true">✉</span>
             <span class="contact-label">Email</span>
             <span class="contact-value">jiaxixus@gmail.com</span>
+          </a>
+          <a class="contact-card" href="tel:+14342270346">
+            <span class="contact-icon" aria-hidden="true">✆</span>
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">(434) 227-0346</span>
           </a>
           <a class="contact-card" href="https://github.com/xujiaxi" target="_blank" rel="noopener">
             <span class="contact-icon" aria-hidden="true">⌥</span>
@@ -278,11 +343,12 @@
 
   <footer class="site-footer">
     <div class="container footer-wrap">
-      <p>© <span id="year">2025</span> Jiaxi Xu. Built with care and deployed on GitHub Pages.</p>
+      <p>© <span id="year">2025</span> Jiaxi Xu · Built on GitHub Pages · Updated Aug 2026</p>
       <p class="footer-links">
         <a href="https://github.com/xujiaxi" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/jiaxi-xu-tech/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:jiaxixus@gmail.com">Email</a>
+        <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
       </p>
     </div>
   </footer>
